@@ -20,19 +20,15 @@ public partial class Login : System.Web.UI.Page
     protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
     {
 
-        if(txtUsuario.Text == "Vinny" || txtUsuario.Text == "admin" || txtUsuario.Text == "Leonardo")
-        {
-            args.IsValid = true;
-        }
+        args.IsValid = (this.txtUsuario.Text == "admin");
+  
 
     }
 
     protected void CustomValidator2_ServerValidate(object source, ServerValidateEventArgs args)
     {
-        if (txtSenha.Text == "123" || txtSenha.Text == "password")
-        {
-            args.IsValid = true;
-        }
+        args.IsValid = (this.txtSenha.Text == "123");
+  
 
     }
 
